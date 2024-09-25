@@ -7,6 +7,8 @@ import { TimeApp } from "./01_useEffect/05_timer";
 import UseReducerBasic from "./02_useReducer/01_useReducer-basic";
 import ReducerFormControl from "./02_useReducer/02_reducer-form-controll";
 import ReducerQuestion from "./02_useReducer/03_question";
+import HardCalculator from "./03_useMemo/01_hard-calculator";
+import UseMemoComponent from "./03_useMemo/03_performance-useMemo";
 
 function App() {
   const [message,setMessage] = useState("안녕하세요");
@@ -19,7 +21,9 @@ function App() {
       {/* <TimeApp/> */}
       {/* <UseReducerBasic/> */}
       {/* <ReducerFormControl/> */}
-      <ReducerQuestion/>
+      {/* <ReducerQuestion/> */}
+      {/* <HardCalculator/> */}
+      <UseMemoComponent/>
     </>
   );
 }
