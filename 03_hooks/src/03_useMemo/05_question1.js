@@ -12,6 +12,6 @@ const SqareCalculator = () => {
     },[numbers]);
 
 }
-
+ 
 
 export default SqareCalculator;

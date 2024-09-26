@@ -9,6 +9,8 @@ import ReducerFormControl from "./02_useReducer/02_reducer-form-controll";
 import ReducerQuestion from "./02_useReducer/03_question";
 import HardCalculator from "./03_useMemo/01_hard-calculator";
 import UseMemoComponent from "./03_useMemo/03_performance-useMemo";
+import CallBackProblem from "./04_useCallback/01_problem";
+import FunctionMemoization from "./04_useCallback/02_function-memoization";
 
 function App() {
   const [message,setMessage] = useState("안녕하세요");
@@ -22,8 +24,10 @@ function App() {
       {/* <UseReducerBasic/> */}
       {/* <ReducerFormControl/> */}
       {/* <ReducerQuestion/> */}
-      {/* <HardCalculator/> */}
-      <UseMemoComponent/>
+      {/* <HardCalculator/>
+      <UseMemoComponent/> */}
+      {/* <CallBackProblem/> */}
+      <FunctionMemoization/>
     </>
   );
 }
