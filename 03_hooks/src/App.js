@@ -11,6 +11,11 @@ import HardCalculator from "./03_useMemo/01_hard-calculator";
 import UseMemoComponent from "./03_useMemo/03_performance-useMemo";
 import CallBackProblem from "./04_useCallback/01_problem";
 import FunctionMemoization from "./04_useCallback/02_function-memoization";
+import CallbackComponent from "./04_useCallback/03_components";
+import UseRefCounter from "./05_useRef/02_useRef";
+import LoginComponent from "./05_useRef/03_inputRef";
+import Page from "./06_useContext/01_props-dribbling";
+import ContextContainer from "./06_useContext/02_useContext";
 
 function App() {
   const [message,setMessage] = useState("안녕하세요");
@@ -27,7 +32,12 @@ function App() {
       {/* <HardCalculator/>
       <UseMemoComponent/> */}
       {/* <CallBackProblem/> */}
-      <FunctionMemoization/>
+      {/* <FunctionMemoization/> */}
+      {/* <CallbackComponent/> */}
+      {/* <UseRefCounter/> */}
+      {/* <LoginComponent/> */}
+      {/* <Page/> */}
+      <ContextContainer/>
     </>
   );
 }

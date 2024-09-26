@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 
 const CallbackComponent = () => {
@@ -6,13 +6,13 @@ const CallbackComponent = () => {
     const [size, setSize] = useState(200);
     const [isDark,setIsDark] = useState(false);
 
-    const genSquareStyle = ()=>{
+    const genSquareStyle = useCallback(()=>{
         return {
-            backgroundColor : "orangred",
+            backgroundColor : "orangered",
             width : size,
             height : size
         }
-    };
+    },[size]);
 
     return (
         <>
@@ -23,9 +23,22 @@ const CallbackComponent = () => {
 
                 <button onClick={()=>setIsDark(!isDark)}>{isDark.toString()}</button>
                 <Square genSquareStyle={genSquareStyle}/>
-                
+
             </div>
         </>
     )
 
 }
+
+
+const Square = ({genSquareStyle}) => {
+    const [style,setStyle] = useState({});
+
+    useEffect(()=>{
+        console.log("style 변경");
+        setStyle(genSquareStyle());
+    },[genSquareStyle]);
+
+    return <div style={style}></div>
+}
+export default CallbackComponent;
