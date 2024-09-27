@@ -20,7 +20,7 @@ const HooksProblem = () =>{
         }
     }
 
-    const handlePasword = e =>{
+    const handlePassword = e =>{
         setPassword(e.target.value);
         if(e.target.value.length >=10){
             console.log("10자리 이상 잘 입력 함.");
