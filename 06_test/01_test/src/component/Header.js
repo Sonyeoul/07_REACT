@@ -1,6 +1,6 @@
 export const Header = ()=>{
     return(
-        <h1>커피 주문 사이트</h1>
+        <h1>영화 목록 애플리케이션</h1>
     )
 }
 
