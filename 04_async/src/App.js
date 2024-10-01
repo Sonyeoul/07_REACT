@@ -1,4 +1,6 @@
 
+
+import { News } from './00_question/00_question';
 import ApiComponent from './02_api/02_fetch-then';
 import { AxiosCallComponent } from './02_api/03_axios';
 import { EmojiContainer } from './02_api/04_github-emoji';
@@ -15,7 +17,8 @@ function App() {
     {/* <EmojiContainer/> */}
     {/* <Container/> */}
     {/* <WeatherQuestion/> */}
-    <Box/>
+    {/* <Box/> */}
+    <News/>
   </>
   );
 }

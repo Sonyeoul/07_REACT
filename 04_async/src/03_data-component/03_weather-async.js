@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 
 export const WeatherQuestion = () => {
   const API_KEY = '207a52923e0d2e1ca4acea1ce48628fc';
