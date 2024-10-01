@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+<<<<<<< HEAD
 export const Weather = ()=>{
     const API_KEY='207a52923e0d2e1ca4acea1ce48628fc';
 
@@ -10,6 +11,18 @@ export const Weather = ()=>{
 
     useEffect(()=>{
         new Promise((resolve,reject)=>{
+=======
+const Weather =()=>{
+    const API_KEY = '207a52923e0d2e1ca4acea1ce48628fc';
+
+    const [position, setPosition] = useState({}); // 현재 위치 저장
+    const [cityName, setCityName] = useState(""); // 현재 도시 이름
+    const [weather, setWeather] = useState({}); // 날씨 정보 저장
+    const [wind, setWind] = useState({}); // 바람 정보 저장
+
+    useEffect(()=>{
+        new Promise((resolve, reject)=>{
+>>>>>>> 6f575384880afb77d48bb9566394499e392857aa
             
             navigator.geolocation.getCurrentPosition((currentPosition)=>{
                 setPosition({
@@ -18,6 +31,7 @@ export const Weather = ()=>{
                 });
                 resolve(currentPosition.coords);
             });
+<<<<<<< HEAD
         }).then(coords=>{
             fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}`)
         .then(response=>response.json())
@@ -29,6 +43,21 @@ export const Weather = ()=>{
         });
     })
     },[])
+=======
+
+        }).then(coords =>{
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${API_KEY}`)
+                .then(response => response.json())
+                .then(data=>{
+                    console.log(data);
+                    setCityName(data.name);
+                    setWeather(data.weather[0]);
+                    setWind(data.wind);
+                });
+        })
+    },[])
+
+>>>>>>> 6f575384880afb77d48bb9566394499e392857aa
     return (
         <>
           <h3>오늘의 날씨</h3>
@@ -38,4 +67,10 @@ export const Weather = ()=>{
           <h4>{`풍향  : ${wind.deg}도 풍속 : ${wind.speed}m/s`}</h4>
         </>
       );
+<<<<<<< HEAD
 }
+=======
+}
+
+export default Weather;
+>>>>>>> 6f575384880afb77d48bb9566394499e392857aa
